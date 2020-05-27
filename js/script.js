@@ -6,13 +6,23 @@
 var numero = 0;
 var listaFizzBuzz = document.getElementById('lista_fizzbuzz');
 
-// Fai un ciclo per scirvere i numeri da uno a 100
-while (numero < 100) {
-  numero = numero + 1;
-  listaFizzBuzz.innerHTML +=  '<li>' + numero + '</li>';
-}
+// Fai un ciclo for per scirvere i numeri da uno a 100
+// for (var i = 0; i < 100; i++) {
+//   numero += 1;
+//   console.log(numero);
+//   listaFizzBuzz.innerHTML +=  '<li>' + numero + '</li>';
+// }
 
 // Condizione per i numeri multipli di 3
+for (var i = 1; i <= 100; i++) {
+  numero += 1;
+  if (numero % 3 == 0) {
+    numero = 'Fizz';
+  }
+  listaFizzBuzz.innerHTML +=  '<li>' + numero + '</li>';
+  numero = i;
+}
+
 
 // Condizione per i multipli di 5
 
