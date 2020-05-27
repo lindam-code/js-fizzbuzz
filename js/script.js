@@ -6,18 +6,14 @@
 var numero = 0;
 var listaFizzBuzz = document.getElementById('lista_fizzbuzz');
 
-// Fai un ciclo for per scirvere i numeri da uno a 100
-// for (var i = 0; i < 100; i++) {
-//   numero += 1;
-//   console.log(numero);
-//   listaFizzBuzz.innerHTML +=  '<li>' + numero + '</li>';
-// }
-
-// Condizione per i numeri multipli di 3
+// Ciclo for per scrivere la lista di numeri da 1 a 100
 for (var i = 1; i <= 100; i++) {
   numero += 1;
+  // Condizione per i multipli di tre 'Fizz'
   if (numero % 3 == 0) {
     numero = 'Fizz';
+  } else if (numero % 5 == 0) {  // Condizione per i multipli di 5 'Buzz'
+    numero = 'Buzz';
   }
   listaFizzBuzz.innerHTML +=  '<li>' + numero + '</li>';
   numero = i;
